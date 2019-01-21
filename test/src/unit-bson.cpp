@@ -1,7 +1,7 @@
 /*
     __ _____ _____ _____
  __|  |   __|     |   | |  JSON for Modern C++ (test suite)
-|  |  |__   |  |  | | | |  version 3.4.0
+|  |  |__   |  |  | | | |  version 3.5.0
 |_____|_____|_____|_|___|  https://github.com/nlohmann/json
 
 Licensed under the MIT License <http://opensource.org/licenses/MIT>.
@@ -821,7 +821,7 @@ TEST_CASE("BSON numerical data")
                 for (auto i : numbers)
                 {
 
-                    CAPTURE(i);
+                    CAPTURE(i)
 
                     json j =
                     {
@@ -893,7 +893,7 @@ TEST_CASE("BSON numerical data")
                 for (auto i : numbers)
                 {
 
-                    CAPTURE(i);
+                    CAPTURE(i)
 
                     json j =
                     {
@@ -946,7 +946,7 @@ TEST_CASE("BSON numerical data")
                 for (auto i : numbers)
                 {
 
-                    CAPTURE(i);
+                    CAPTURE(i)
 
                     json j =
                     {
@@ -1008,7 +1008,7 @@ TEST_CASE("BSON numerical data")
                 for (auto i : numbers)
                 {
 
-                    CAPTURE(i);
+                    CAPTURE(i)
 
                     json j =
                     {
@@ -1063,7 +1063,7 @@ TEST_CASE("BSON numerical data")
                 for (auto i : numbers)
                 {
 
-                    CAPTURE(i);
+                    CAPTURE(i)
 
                     json j =
                     {
@@ -1113,7 +1113,7 @@ TEST_CASE("BSON numerical data")
                 for (auto i : numbers)
                 {
 
-                    CAPTURE(i);
+                    CAPTURE(i)
 
                     json j =
                     {
@@ -1159,7 +1159,7 @@ TEST_CASE("BSON roundtrips", "[hide]")
                     "test/data/json.org/5.json"
                 })
         {
-            CAPTURE(filename);
+            CAPTURE(filename)
 
             SECTION(filename + ": std::vector<uint8_t>")
             {

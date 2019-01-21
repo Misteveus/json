@@ -1,5 +1,6 @@
 #pragma once
 
+#include <algorithm> // all_of
 #include <cassert> // assert
 #include <numeric> // accumulate
 #include <string> // string
@@ -96,7 +97,6 @@ class json_pointer
         return res;
     }
 
-  private:
     /*!
     @brief remove and return last reference pointer
     @throw out_of_range.405 if JSON pointer has no parent
@@ -113,6 +113,16 @@ class json_pointer
         return last;
     }
 
+    /*!
+    @brief remove and return last reference pointer
+    @throw out_of_range.405 if JSON pointer has no parent
+    */
+    void push_back(const std::string& tok)
+    {
+        reference_tokens.push_back(tok);
+    }
+
+  private:
     /// return whether pointer points to the root document
     bool is_root() const noexcept
     {
